@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="quiz-title">Test Your Programming Knowledge</h1>
+    <div class="quiz-container">
+      <div class="score-card">
+        <p>Score : <span class="scoreCard">0</span></p>
+      </div>
+      <div class="quiz-question">
+        <h2 class="quiz"></h2>
+      </div>
+      <div>
+      <div class="quiz-options">
+        <ul id="ul" style="list-style: none;">
+          <li id="op1" onclick="button(this)"></li>
+          <li id="op2" onclick="button(this)"></li>
+          <li id="op3" onclick="button(this)"></li>
+          <li id="op4" onclick="button(this)"></li>
+        </ul>
+      </div>
+      <div class="totalScore"></div>
+      <div class="PaginationBtn">
+        <button id="next" onclick="next()">Next</button>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

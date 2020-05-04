@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: #343a40;
+  display: flex;
+  min-height: 60vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.container {
+  display: block;
+}
+.quiz-title {
+  color: #fff;
+  font-size: 2em;
+}
+.quiz-container {
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 25px;
+  border: hidden;  
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px #ccc;
+}
+.quiz-question {
+  padding: 25px 10px;
+  border: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 2px rgb(41, 41, 41);
+}
+.quiz {
+  font-size: 1em;
+}
+.quiz-options {
+  margin-top: 20px;
+  width: 100%;
+}
+.quiz-options ul li {
+  padding: 10px 7px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px #000;
+}
+li:hover {
+  background-color: #ccc;
+  color: #fff;
+  box-shadow: 0px 0px 5px rgb(53, 0, 0) !important;
+}
+button {
+  display: inline-block;
+	font-size: 1em;
+	background-color: #279;
+	color: #fff;
+	border: hidden;
+	border-radius: 3px;
+	padding: 15px 35px;
+	cursor: pointer;
+	margin: 5px 0px;
+}
+.PaginationBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+button:hover {
+	background-color: rgb(0, 41, 58);
+}
+.score-card {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.scoreCard {
+  margin: 5px;
+  padding: 5px;
+  border: hidden;
+  border: 3px;
+  box-shadow: 0px 0px 2px #ccc;
+  background-color: rgba(31, 30, 31, 0.933);
+  color: #fff;
+}
+.total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 15vh;
+  margin: 20px;
+  font-size: 2em;
+}
