@@ -3,11 +3,19 @@ const scoreCard = document.querySelector('.scoreCard');
 const totalScore = document.querySelector('.score-card');
 const btn = document.getElementById('next');
 const quizQuestions = document.querySelector('.quiz');
+const quizSection = document.querySelector('#quizBody');
 const op1 = document.getElementById('op1');
 const op2 = document.getElementById('op2');
 const op3 = document.getElementById('op3');
 const op4 = document.getElementById('op4');
+const startQuizBtn = document.querySelector('.start-page')
 
+startQuizBtn.addEventListener('click', startQuiz);
+
+function startQuiz() {
+  startQuizBtn.classList.add('hide');
+  quizSection.classList.remove('hide');
+}
 
 let app = {
   questions: [
@@ -52,7 +60,6 @@ let app = {
       this.scoreCard();
     }
     else {
-      quizQuestions.innerHTML = `Your total score is ** ${this.score} ** <br/><br/>Reload page to try again`;
       totalScore.className = 'total';
       op1.style.display = "none";
       op2.style.display = "none";
@@ -62,6 +69,15 @@ let app = {
       btn.addEventListener("click", () => {
         location.reload();
       })
+      if (this.score == 4 || this.score == 5) {
+        quizQuestions.innerHTML = `<p style="font-size:1.5em">Excellent!!!</p>`;
+      } else if (this.score == 3) {
+        quizQuestions.innerHTML = `<p style="font-size:1.5em">You can do better</p>`;
+      } else if (this.score <= 2){
+        quizQuestions.innerHTML = `<p style="font-size:1.5em">Please try again</p>`;
+      } else {
+        
+      }
     }
   },
   check: function (e) {
@@ -80,7 +96,7 @@ let app = {
   },
   next: function () {
     if (this.questions[this.index].pass !== true) {
-      return alert("Please select an option");
+      return alert('Please pick an option');
     }
     this.index++;
     this.load();
